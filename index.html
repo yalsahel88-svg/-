@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الحل النهائي | جزئي المفقود</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#090909;
+color:white;
+line-height:1.9;
+}
+
+section{
+padding:70px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.hero{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+.warning{
+
+border:1px solid #9b0000;
+background:#130909;
+padding:30px;
+border-radius:18px;
+max-width:650px;
+box-shadow:0 0 40px rgba(255,0,0,.15);
+
+}
+
+.warning h1{
+
+font-size:40px;
+margin-bottom:20px;
+color:#ff4d4d;
+
+}
+
+.warning p{
+
+font-size:19px;
+opacity:.9;
+
+}
+
+button{
+
+margin-top:35px;
+background:#b30000;
+color:white;
+border:none;
+padding:18px 45px;
+font-size:20px;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+background:#d40000;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+.fade{
+
+animation:fade .8s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.title{
+
+font-size:42px;
+margin-bottom:35px;
+font-weight:900;
+text-align:center;
+
+}
+
+.card{
+
+background:#141414;
+
+border:1px solid #272727;
+
+padding:25px;
+
+border-radius:18px;
+
+margin-bottom:25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.card h2{
+
+margin-bottom:12px;
+font-size:28px;
+
+}
+
+.card p{
+
+opacity:.88;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+gap:18px;
+
+margin-top:30px;
+
+}
+
+.person{
+
+background:#171717;
+
+padding:20px;
+
+border-radius:14px;
+
+border:1px solid #2b2b2b;
+
+transition:.25s;
+
+}
+
+.person:hover{
+
+transform:translateY(-5px);
+
+}
+
+.person h3{
+
+margin-bottom:8px;
+
+}
+
+.tag{
+
+display:inline-block;
+
+padding:5px 14px;
+
+background:#262626;
+
+border-radius:30px;
+
+font-size:13px;
+
+margin-top:10px;
+
+}
+
+.eliminated{
+
+border-right:5px solid #19b35b;
+
+}
+
+.final{
+
+border-right:5px solid #c40000;
+
+}
+
+.truth{
+
+background:#1b0d0d;
+
+border:1px solid #742121;
+
+text-align:center;
+
+}
+
+.truth h2{
+
+font-size:36px;
+
+color:#ff5757;
+
+margin-bottom:15px;
+
+}
+
+.truth p{
+
+font-size:20px;
+
+}
+
+footer{
+
+text-align:center;
+
+padding:70px 20px;
+
+opacity:.55;
+
+font-size:15px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<div class="warning">
+
+<h1>⚠️ تنبيه</h1>
+
+<p>
+
+أنت على وشك الاطلاع على الحل النهائي لقضية
+<b>جزئي المفقود</b>.
+
+<br><br>
+
+إذا لم تنهِ التحقيق بعد...
+
+ننصحك بعدم إكمال القراءة.
+
+</p>
+
+<button onclick="startCase()">
+
+كشف الحقيقة
+
+</button>
+
+</div>
+
+</div>
+
+<div id="content" class="hidden">
+
+<section class="fade">
+
+<div class="card truth">
+
+<h2>
+
+الحقيقة
+
+</h2>
+
+<p>
+
+لم يكن هناك قاتل...
+
+<br><br>
+
+<b style="font-size:28px">
+
+راشد عثمان هو من أنهى حياته بنفسه.
+
+</b>
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h1 class="title">
+
+نبذة سريعة
+
+</h1>
+
+<div class="card">
+
+<p>
+
+بدأت القضية بعد دخول سعد علي إلى المخفر
+وملابسه ملطخة بالدم، وبعد تتبع هاتفه وصلت
+الشرطة إلى شقة راشد، حيث عُثر عليه مصابًا
+بطلقة في رأسه داخل غرفة نومه.
+
+كانت جميع الأدلة توحي بوجود قاتل...
+
+لكن الحقيقة كانت مختلفة.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h1 class="title">
+
+المشتبه فيهم
+
+</h1>
+
+<div class="grid">
+
+<div class="person">
+
+<h3>سعد علي</h3>
+
+<div class="tag">
+
+صديق الضحية
+
+</div>
+
+</div>
+
+<div class="person">
+
+<h3>عبدالله محمد</h3>
+
+<div class="tag">
+
+خلافات سابقة
+
+</div>
+
+</div>
+
+<div class="person">
+
+<h3>غالية فهد</h3>
+
+<div class="tag">
+
+طليقة راشد
+
+</div>
+
+</div>
+
+<div class="person">
+
+<h3>وليد عثمان</h3>
+
+<div class="tag">
+
+شقيق الضحية
+
+</div>
+
+</div>
+
+<div class="person">
+
+<h3>زكريا</h3>
+
+<div class="tag">
+
+حارس العمارة
+
+</div>
+
+</div>
+
+<div class="person">
+
+<h3>د. أبرار</h3>
+
+<div class="tag">
+
+الطبيبة النفسية
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section>
+
+<h1 class="title">
+
+التقليص الأول
+
+</h1>
+
+<div class="card eliminated">
+
+<h2>✅ استبعاد عبدالله محمد</h2>
+
+<p>
+
+• تغريدات 🍁 بينه وبين سارة أثبتت علاقتهما.
+
+<br>
+
+• صورة الفيديو كول في حساب سارة أثبتت وجوده بالواجهة البحرية وقت الجريمة.
+
+</p>
+
+</div>
+
+<div class="card eliminated">
+
+<h2>✅ استبعاد د. أبرار</h2>
+
+<p>
+
+• هايلايت الجري 🏃🏻‍♀️ في إنستغرام.
+
+<br>
+
+• الصورة أثبتت وجودها في الشهداء وقت وقوع الجريمة.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h1 class="title">
+
+التقليص الثاني
+
+</h1>
+
+<div class="card eliminated">
+
+<h2>✅ استبعاد غالية فهد</h2>
+
+<p>
+
+• تقرير المراجعة النفسية يثبت خوفها الشديد من المطر.
+
+<br>
+
+• تغريدة عبدالله القديمة تؤكد نفس المعلومة.
+
+</p>
+
+</div>
+
+<div class="card eliminated">
+
+<h2>✅ استبعاد زكريا</h2>
+
+<p>
+
+• أقواله تطابقت مع تسجيلات الكاميرات.
+
+<br>
+
+• حتى لو تحرك بعد سعد، الزمن لا يسمح له بتنفيذ الجريمة.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h1 class="title">
+
+المشتبهان الأخيران
+
+</h1>
+
+<div class="card final">
+
+<h2>وليد عثمان</h2>
+
+<p>
+
+• تقرير الحساسية يثبت معاناته من حساسية شديدة تجاه الكلاب.
+
+<br>
+
+• وجود كلب داخل الشقة يجعل دخوله غير منطقي.
+
+</p>
+
+</div>
+
+<div class="card final">
+
+<h2>سعد علي</h2>
+
+<p>
+
+• كاميرا العمارة سجلت وصوله الساعة <b>03:28:05</b>.
+
+<br>
+
+• الطلقة كانت قرابة <b>03:32</b>.
+
+<br>
+
+• الوقت لا يكفي للصعود إلى الدور الثالث والدخول وتنفيذ الجريمة.
+
+</p>
+
+</div>
+
+</section>
+<section>
+
+<h1 class="title">
+
+كيف حدثت الواقعة؟
+
+</h1>
+
+<div class="card">
+
+<p>
+
+لم تُثبت الأدلة وجود أي شخص داخل الشقة وقت إطلاق النار.
+
+<br><br>
+
+الأدلة النفسية والمالية الخاصة براشد كانت تشير إلى تدهور حالته بشكل مستمر، بينما كانت جميع أدلة المشتبه فيهم تستبعدهم واحدًا تلو الآخر.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card truth">
+
+<h2>
+
+الخلاصة
+
+</h2>
+
+<p>
+
+بعد مراجعة جميع الأدلة...
+
+تبين أن القضية لم تكن جريمة قتل.
+
+<br><br>
+
+<b style="font-size:28px">
+
+راشد عثمان أنهى حياته بنفسه.
+
+</b>
+
+<br><br>
+
+وكان سعد أول من وصل إلى الشقة بعد الواقعة، ولذلك انتقل الدم إلى ملابسه وأصبح المشتبه الأول.
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+BLACK BOX © 2026
+
+</footer>
+
+</div>
+
+<script>
+
+function startCase(){
+
+document.querySelector(".hero").style.display="none";
+
+document.getElementById("content").classList.remove("hidden");
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
